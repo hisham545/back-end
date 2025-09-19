@@ -18,7 +18,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
   const { title, desc } = req.body;
   const file = req.file;
   if (title && desc && file) {
-    const image = `https://my-backend.vercel.app
+    const image = `http://localhost:5000
 /uploads/${req.file.filename}`;
     const all = await recipe.create({
       title,
